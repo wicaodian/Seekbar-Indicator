@@ -1,3 +1,5 @@
+[![](https://jitpack.io/v/wicaodian/Seekbar-Indicator.svg)](https://jitpack.io/#wicaodian/Seekbar-Indicator)
+
 # IndicatorSeekBar
 
 A customizable Android SeekBar with adjustable size, color, thumb, tick marks, and indicator. Supports dynamic styling via XML or code, gradient tracks, animated tick marks, and a progress indicator with customizable text and appearance.
