@@ -55,9 +55,9 @@ publishing {
         register<MavenPublication>("release") {
             afterEvaluate {
                 from(components["release"])
-                groupId = "com.wicaodian"
+                groupId = "com.github.wicaodian"
                 artifactId = "Seekbar-Indicator"
-                version = "1.0.1"
+                version = "1.0.2"
 
             }
         }
