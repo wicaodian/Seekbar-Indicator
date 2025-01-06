@@ -20,5 +20,5 @@ dependencyResolutionManagement {
 }
 
 rootProject.name = "SeekbarWithIndicator"
-include(":app",":indicatorseekbar")
- 
+include(":app")
+include(":seekbarindicator")
