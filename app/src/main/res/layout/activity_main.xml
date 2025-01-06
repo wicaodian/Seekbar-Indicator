@@ -8,7 +8,7 @@
     tools:context=".MainActivity">
 
 
-    <com.warkiz.widget.IndicatorSeekBar
+    <com.wicaodian.widget.IndicatorSeekBar
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:isb_max="11"
