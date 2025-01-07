@@ -57,7 +57,7 @@ publishing {
                 from(components["release"])
                 groupId = "com.github.wicaodian"
                 artifactId = "Seekbar-Indicator"
-                version = "1.0.4"
+                version = "1.0.3"
 
             }
         }
