@@ -254,3 +254,10 @@ seekBar.setOnSeekChangeListener(new OnSeekChangeListener() {
 
 [ attr.xml ](https://github.com/wicaodian/Seekbar-Indicator/blob/master/seekbarindicator/src/main/res/values/attr.xml)
 
+### Credit
+
+This library was originally developed by [Chuang Guangquan](https://github.com/warkiz). His contributions laid the foundation for this project, and his work is greatly appreciated.
+
+**Note:** The original author is no longer actively maintaining this library. Additionally, the latest version of the library has issues with downloading, which may affect its usability.
+
+We encourage the community to contribute improvements or fork the project if needed.
