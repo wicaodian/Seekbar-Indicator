@@ -26,7 +26,7 @@ import androidx.annotation.Nullable;
  * <p>
  */
 
-class CircleBubbleView extends View {
+public class CircleBubbleView extends View {
     private int mIndicatorTextColor;
     private int mIndicatorColor;
     private float mIndicatorTextSize;

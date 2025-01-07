@@ -21,7 +21,7 @@ import android.view.View;
  * <p>
  */
 
-class ArrowView extends View {
+public class ArrowView extends View {
     private final int mWidth;
     private final int mHeight;
     private final Path mPath;

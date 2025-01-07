@@ -23,7 +23,7 @@ import androidx.annotation.Nullable;
  * @see <a href="https://github.com/warkiz/IndicatorSeekBar/blob/master/app/src/main/res/mipmap-xxhdpi/alipay.png?raw=true">支付宝</a>
  * <p>
  */
-class IndicatorStayLayout extends LinearLayout {
+public class IndicatorStayLayout extends LinearLayout {
 
     public IndicatorStayLayout(Context context) {
         this(context, null);
