@@ -1,4 +1,4 @@
-[![](https://jitpack.io/v/wicaodian/Seekbar-Indicator.svg)](https://jitpack.io/#wicaodian/Seekbar-Indicator)
+[![](https://jitpack.io/v/wicaodian/seekbar-indicator.svg)](https://jitpack.io/#wicaodian/seekbar-indicator)
 
 # IndicatorSeekBar
 
