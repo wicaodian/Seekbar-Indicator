@@ -250,3 +250,7 @@ seekBar.setOnSeekChangeListener(new OnSeekChangeListener() {
             }
         });
 ```
+## Attributes
+
+[ attr.xml ](https://github.com/wicaodian/Seekbar-Indicator/blob/master/seekbarindicator/src/main/res/values/attr.xml)
+
