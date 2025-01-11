@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            style="@style/title_text_style"
+            android:text="Discrete" />
+
+        <TextView
+            style="@style/subtitle_text_style"
+            android:text="1. default, ticks_count=5" />
+
+        <com.wicaodian.widget.IndicatorSeekBar
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:isb_progress="25"
+            app:isb_tick_marks_size="3dp"
+            app:isb_ticks_count="5" />
+
+        <TextView
+            style="@style/subtitle_text_style"
+            android:text="2. show_tick_marks_type=divider, customSectionTrackColor" />
+
+        <com.wicaodian.widget.IndicatorSeekBar
+            android:id="@+id/custom_section_color"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:isb_progress="30"
+            app:isb_show_indicator="rectangle"
+            app:isb_show_tick_marks_type="divider"
+            app:isb_tick_marks_color="#FFFFFFFF"
+            app:isb_ticks_count="5"
+            app:isb_track_background_size="4dp"
+            app:isb_track_progress_size="4dp" />
+
+
+        <TextView
+            style="@style/subtitle_text_style"
+            android:text="3. seek_smoothly=true,\n show_tick_marks_type=square,\n thumb_size=13dp,\n thumb_drawable=@mipmap/ic_launcher" />
+
+        <com.wicaodian.widget.IndicatorSeekBar
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:isb_progress="50"
+            app:isb_seek_smoothly="true"
+            app:isb_show_indicator="circular_bubble"
+            app:isb_show_tick_marks_type="square"
+            app:isb_thumb_drawable="@mipmap/ic_launcher"
+            app:isb_thumb_size="13dp"
+            app:isb_ticks_count="4" />
+
+        <TextView
+            style="@style/subtitle_text_style"
+            android:text="4. seek_smoothly=true, show_tick_marks_type=oval,\n customTickTexts,thumb_adjust_auto=false" />
+
+        <com.wicaodian.widget.IndicatorSeekBar
+            android:id="@+id/custom_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:isb_progress="30"
+            app:isb_seek_smoothly="true"
+            app:isb_show_indicator="rounded_rectangle"
+            app:isb_show_tick_marks_type="oval"
+            app:isb_show_tick_texts="true"
+            app:isb_thumb_adjust_auto="false"
+            app:isb_ticks_count="7"
+            app:isb_track_progress_color="@color/color_blue" />
+
+        <TextView
+            style="@style/subtitle_text_style"
+            android:text="5. ticks_count=6, indicator_stay" />
+
+        <com.wicaodian.widget.IndicatorStayLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <com.wicaodian.widget.IndicatorSeekBar
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:isb_progress="30"
+                app:isb_show_tick_marks_type="oval"
+                app:isb_ticks_count="6" />
+
+        </com.wicaodian.widget.IndicatorStayLayout>
+
+        <TextView
+            style="@style/subtitle_text_style"
+            android:text="6. tick_marks_drawable=@mipmap/ic_launcher, tick_marks_swept_hide=true" />
+
+        <com.wicaodian.widget.IndicatorSeekBar
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:isb_progress="25"
+            app:isb_show_indicator="circular_bubble"
+            app:isb_tick_marks_drawable="@mipmap/ic_launcher"
+            app:isb_tick_marks_size="15dp"
+            app:isb_tick_marks_swept_hide="true"
+            app:isb_ticks_count="5" />
+
+        <TextView
+            style="@style/subtitle_text_style"
+            android:text="7. tick_texts_array=@array/small_normal_middle_large_length_7, tick_marks_ends_hide=true" />
+
+        <com.wicaodian.widget.IndicatorStayLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <com.wicaodian.widget.IndicatorSeekBar
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:isb_progress="66"
+                app:isb_show_indicator="rectangle"
+                app:isb_show_tick_marks_type="divider"
+                app:isb_show_tick_texts="true"
+                app:isb_tick_marks_color="@color/color_blue"
+                app:isb_tick_marks_ends_hide="true"
+                app:isb_tick_texts_array="@array/small_normal_middle_large_length_7"
+                app:isb_tick_texts_color="@color/color_blue"
+                app:isb_ticks_count="7" />
+        </com.wicaodian.widget.IndicatorStayLayout>
+
+        <TextView
+            style="@style/subtitle_text_style"
+            android:text="8. tick_texts_color=@color/selector_tick_texts_3_color, r2l=true" />
+
+        <com.wicaodian.widget.IndicatorStayLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <com.wicaodian.widget.IndicatorSeekBar
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:isb_progress="50"
+                app:isb_r2l="true"
+                app:isb_show_indicator="circular_bubble"
+                app:isb_show_tick_marks_type="oval"
+                app:isb_show_tick_texts="true"
+                app:isb_tick_texts_color="@color/selector_tick_texts_3_color"
+                app:isb_ticks_count="7" />
+        </com.wicaodian.widget.IndicatorStayLayout>
+
+        <TextView
+            style="@style/subtitle_text_style"
+            android:text="9. tick_marks_color=@color/selector_tick_marks_color,thumb_adjust_auto=false" />
+
+        <com.wicaodian.widget.IndicatorSeekBar
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:isb_max="-40"
+            app:isb_min="-100"
+            app:isb_progress="-70"
+            app:isb_seek_smoothly="true"
+            app:isb_show_indicator="rectangle"
+            app:isb_show_tick_marks_type="square"
+            app:isb_show_tick_texts="true"
+            app:isb_thumb_adjust_auto="false"
+            app:isb_tick_marks_color="@color/selector_tick_marks_color"
+            app:isb_ticks_count="5"
+            app:isb_track_progress_color="@color/color_blue"
+            app:isb_track_progress_size="3dp" />
+
+        <TextView
+            style="@style/subtitle_text_style"
+            android:text="10. custom_tick_text" />
+
+        <TextView
+            android:id="@+id/states"
+            style="@style/des_text_style" />
+
+        <TextView
+            android:id="@+id/progress"
+            style="@style/des_text_style" />
+
+        <TextView
+            android:id="@+id/progress_float"
+            style="@style/des_text_style" />
+
+        <TextView
+            android:id="@+id/from_user"
+            style="@style/des_text_style" />
+
+        <TextView
+            android:id="@+id/thumb_position"
+            style="@style/des_text_style" />
+
+        <TextView
+            android:id="@+id/tick_text"
+            style="@style/des_text_style" />
+
+        <com.wicaodian.widget.IndicatorSeekBar
+            android:id="@+id/listener"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:isb_progress="40"
+            app:isb_show_indicator="circular_bubble"
+            app:isb_show_tick_marks_type="oval"
+            app:isb_show_tick_texts="true"
+            app:isb_tick_texts_array="@array/tick_below_text_length_5"
+            app:isb_ticks_count="5" />
+
+        <TextView
+            style="@style/subtitle_text_style"
+            android:text="11. setTickMarksDrawable, tick_texts_array=@array/last_next_length_6" />
+
+        <com.wicaodian.widget.IndicatorSeekBar
+            android:id="@+id/tick_drawable"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="18dp"
+            app:isb_progress="40"
+            app:isb_show_tick_marks_type="oval"
+            app:isb_show_tick_texts="true"
+            app:isb_tick_texts_array="@array/last_next_length_6"
+            app:isb_ticks_count="6" />
+
+        <include layout="@layout/source_code_link" />
+    </LinearLayout>
+
+</ScrollView>
