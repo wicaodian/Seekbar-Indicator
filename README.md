@@ -5,6 +5,12 @@
 A customizable Android SeekBar with adjustable size, color, thumb, tick marks, and indicator. Supports dynamic styling via XML or code, gradient tracks, animated tick marks, and a progress indicator with customizable text and appearance.
 
 
+## Overview
+<img src="https://github.com/wicaodian/Seekbar-Indicator/blob/master/gif/overview.png?raw=true" width = "392" height = "115"/>
+
+##Screenshots
+<img src="https://github.com/wicaodian/Seekbar-Indicator/blob/master/gif/continuous.gif?raw=true" width = "264" height = "464"/><img src="https://github.com/wicaodian/Seekbar-Indicator/blob/master/gif/discrete_1.gif?raw=true" width = "264" height = "464"/>
+
 ## Setup
 
 ```gradle
