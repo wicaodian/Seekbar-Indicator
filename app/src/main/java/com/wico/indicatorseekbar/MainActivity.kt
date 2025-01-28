@@ -1,70 +1,76 @@
 package com.wico.indicatorseekbar
 
 import android.os.Bundle
-import android.widget.TextView
+import android.util.Log
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import androidx.fragment.app.Fragment
+import androidx.fragment.app.FragmentActivity
 import androidx.fragment.app.FragmentManager
-import androidx.fragment.app.FragmentPagerAdapter
-import androidx.viewpager.widget.ViewPager
+import androidx.viewpager2.adapter.FragmentStateAdapter
+import androidx.viewpager2.widget.ViewPager2
 import com.google.android.material.tabs.TabLayout
+import com.google.android.material.tabs.TabLayoutMediator
 import com.wico.fragment.ContinuousFragment
 import com.wico.fragment.DiscreteFragment
 
 class MainActivity : BaseActivity() {
 
-    private val sType = arrayOf("continuous", "discrete", "custom", "java", "indicator", "donation")
-    private val mFragmentList = mutableListOf<Fragment>()
-
-    override fun initCreate() {
-        super.initCreate()
-        initFragment()
-        initViews()
-    }
+    private val tabTypes = listOf("continuous", "discrete", "custom", "java", "indicator", "donation")
+    private val fragments = mutableListOf<Fragment>()
 
     override val layoutResId: Int
         get() = R.layout.activity_main
 
-    private fun initFragment() {
-        mFragmentList.apply {
+    override fun initCreate() {
+        super.initCreate()
+        setupFragments()
+        initializeViews()
+        demonstrateStringUtils()
+    }
+
+    private fun setupFragments() {
+        fragments.apply {
             add(ContinuousFragment())
             add(DiscreteFragment())
             add(ContinuousFragment())
             add(DiscreteFragment())
             add(ContinuousFragment())
+            add(DiscreteFragment())
         }
     }
 
-    private fun initViews() {
-        val viewPager = findViewById<ViewPager>(R.id.viewPager)
-        val tabLayout = findViewById<TabLayout>(R.id.tabLayout)
+    private fun initializeViews() {
+        val viewPager = findViewById<ViewPager2>(R.id.viewPager)
+        viewPager.adapter = ViewPagerAdapter(this)
 
-        viewPager.adapter = PagerAdapter(supportFragmentManager)
-        tabLayout.setupWithViewPager(viewPager)
-
-        sType.forEach { s ->
-            val textView = TextView(this).apply {
-                text = s
-            }
-            tabLayout.newTab().customView = textView
-        }
+        TabLayoutMediator(
+            findViewById(R.id.tabLayout),
+            viewPager
+        ) { tab, position ->
+            tab.text = tabTypes[position]
+        }.attach()
     }
 
-    private inner class PagerAdapter(fm: FragmentManager) : FragmentPagerAdapter(fm) {
+    private inner class ViewPagerAdapter(fa: FragmentActivity) : FragmentStateAdapter(fa) {
+        override fun getItemCount(): Int = tabTypes.size
+        override fun createFragment(position: Int): Fragment = fragments[position]
+    }
+    
+    private fun demonstrateStringUtils() {
+        // Generate sample password with mixed requirements
+        val password = generatePassword(
+            length = 14,
+            hasUppercase = false,
+            hasLowercase = false
 
-        override fun getItem(position: Int): Fragment {
-            return mFragmentList[position]
-        }
-
-        override fun getCount(): Int {
-            return sType.size
-        }
-
-        override fun getPageTitle(position: Int): CharSequence {
-            return sType[position]
-        }
+        )
+        
+        Log.d("PasswordDemo", "Generated password: $password")
+        Log.d("PasswordDemo", "Meets complexity: ${
+            password.hasUppercase() 
+        }")
     }
 }
